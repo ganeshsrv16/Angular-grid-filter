@@ -1,0 +1,70 @@
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div>
+      <p align="center" >Students Data</p>
+        <br>
+        <br>
+      
+        <p id="op">Name:</p><input type="text" [(ngModel)]="queryString" id="search" placeholder="Type name to search">
+      <br>
+      <br>
+      <br>
+        <!-- <ul> -->
+         
+            <table id="customers" width= "1200" align="center" border="2"  cellspacing="2">
+              <tr class="bg-warning">
+                <th>Job ID</th>
+                <th>Name</th>
+                <th>Favorite Language</th>
+                <th>Branch</th>
+                <th>Percentage</th>
+                <th>State</th>
+                <th>Result</th>
+              </tr>
+              <tr *ngFor="let n of stu |filter: queryString">
+                
+                  <td>{{n.jid}}</td>
+                  <td>{{n.name|uppercase}}</td>
+                  <td>{{n.favlang|uppercase}}</td>
+                  <td>{{n.branch|uppercase}}</td>
+                  <td>{{n.per}}</td>
+                  <td>{{n.state|uppercase}}</td>
+                  <td><button class="btn btn-outline-dark" [appHigh]="hey(n.per)" (click)="get(n.name,n.per)">Report</button></td>
+                </tr>
+              </table>
+         
+        <!-- </ul> -->
+      </div>
+      </div>
+      </div>
+      </div>
+      
+  
+
+
+        <!-- <h1>I'm a Parent component</h1>
+         <p>Message passed from {{message}}</p> -->
+    
+      
+        <!-- <app-exp3  (messageEvent)='onNotify($event)'></app-exp3> -->
+      <!-- <app-exp3  (messageEvent)='onNotify($event)'></app-exp3> -->
+      
+     
+      <!-- </div> -->
+     
+      <!-- <app-exp1 #srv > </app-exp1> -->
+      <!-- <button (click)="srv.clickme()">temp click</button> -->
+<!-- <app-counter [init]="initial" ></app-counter> -->
+<!-- <app-counter[count]="myCount" (update)="countChange($event)"></app-counter> -->
+      <!--<div app-servers></div>-->
+      <!--<div class="app-servers"></div>-->
+
+    <!-- </div>
+  </div>
+</div> -->
+
